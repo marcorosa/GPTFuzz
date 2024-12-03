@@ -1,0 +1,8 @@
+torch
+torchvision
+torchaudio
+fschat[model_worker,webui]
+openai
+google-generativeai
+vllm
+anthropic

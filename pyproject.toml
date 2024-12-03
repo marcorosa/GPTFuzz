@@ -1,0 +1,37 @@
+[build-system]
+requires = ['setuptools >= 61.0', 'setuptools-scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'gptfuzzer'
+version = '0.0.1'
+dynamic = ['dependencies']
+authors = [
+    {name = 'Jiahao Yu'},
+]
+description = 'GPTFUZZ'
+readme = 'README.md'
+license = {file = 'LICENSE'}
+requires-python = '>= 3.8, < 3.12'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Operating System :: OS Independent',
+    'Topic :: Security',
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ['requirements.txt']}
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+packages = ['gptfuzzer']
+
+[project.urls]
+Homepage = 'https://github.com/sherdencooper/GPTFuzz'
+Documentation = 'https://github.com/sherdencooper/GPTFuzz'
+Repository = 'https://github.com/sherdencooper/GPTFuzz.git'
