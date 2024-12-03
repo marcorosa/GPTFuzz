@@ -6,6 +6,8 @@
 
 This is the official repository for "[GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts](https://arxiv.org/pdf/2309.10253.pdf)" by [Jiahao Yu](https://sherdencooper.github.io/), [Xingwei Lin](https://scholar.google.com/citations?user=Zv_rC0AAAAAJ&hl=en), [Zheng Yu](http://www.dataisland.org/), [Xinyu Xing](http://xinyuxing.org/).
 
+> This branch contains a simplified version of the code, without support for vllm
+
 ## Table of Contents
 
 - [Updates](#updates)
