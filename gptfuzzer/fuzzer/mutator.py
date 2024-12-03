@@ -1,8 +1,7 @@
 import random
 from .core import GPTFuzzer, PromptNode
-from gptfuzzer.utils.openai import openai_request
 from gptfuzzer.utils.template import QUESTION_PLACEHOLDER
-from gptfuzzer.llm import OpenAILLM, LLM
+from gptfuzzer.llm import OpenAILLM
 
 
 class Mutator:
@@ -214,6 +213,6 @@ class MutateRandomSinglePolicy(MutatePolicy):
         mutator = random.choice(self.mutators)
         results = mutator.mutate_single(prompt_node.prompt)
         if self.concatentate:
-            results = [result + prompt_node.prompt  for result in results]
+            results = [result + prompt_node.prompt for result in results]
 
         return [PromptNode(self.fuzzer, result, parent=prompt_node, mutator=mutator) for result in results]
