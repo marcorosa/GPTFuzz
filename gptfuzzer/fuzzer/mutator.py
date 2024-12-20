@@ -1,8 +1,7 @@
 import random
 from .core import GPTFuzzer, PromptNode
-from gptfuzzer.utils.openai import openai_request
 from gptfuzzer.utils.template import QUESTION_PLACEHOLDER
-from gptfuzzer.llm import OpenAILLM, LLM
+from gptfuzzer.llm import OpenAILLM
 
 
 class Mutator:

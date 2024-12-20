@@ -6,6 +6,8 @@
 
 This is the official repository for "[GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts](https://arxiv.org/pdf/2309.10253.pdf)" by [Jiahao Yu](https://sherdencooper.github.io/), [Xingwei Lin](https://scholar.google.com/citations?user=Zv_rC0AAAAAJ&hl=en), [Zheng Yu](http://www.dataisland.org/), [Xinyu Xing](http://xinyuxing.org/).
 
+> This branch contains a simplified version of the code, without support for vllm
+
 ## Table of Contents
 
 - [Updates](#updates)
@@ -25,7 +27,9 @@ This is the official repository for "[GPTFUZZER: Red Teaming Large Language Mode
 
 ## Installation
 
-Please refer to [install.ipynb](./install.ipynb)
+```
+pip install .
+```
 
 ## Datasets
 The datasets for the harmful question and human-written templates are available in `datasets/questions/question_list.csv` and `datasets/prompts/GPTFuzzer.csv`. The questions are sampled from two public datasets: [llm-jailbreak-study](https://sites.google.com/view/llm-jailbreak-study) and [hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf), and the templates are collected from [llm-jailbreak-study](https://sites.google.com/view/llm-jailbreak-study).

@@ -165,7 +165,11 @@ class GPTFuzzer:
                 if self.generate_in_batch:
                     responses = self.target.generate_batch(messages)
                 prompt_node.response = responses
-                prompt_node.results = self.predictor.predict(responses)
+                if prompt_node.response:
+                    prompt_node.results = self.predictor.predict(responses)
+                else:
+                    logging.warning("Got no responses for all prompts.")
+                    prompt_node.results = [0] * len(self.questions)
 
     def update(self, prompt_nodes: 'list[PromptNode]'):
         self.current_iteration += 1
